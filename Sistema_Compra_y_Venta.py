@@ -30,8 +30,9 @@ l_cm=[]
 c_c=0
 
 mn_p=0
-print('\n       Tienda "Ahorra-Express"\n'  )
+
 while mn_p!=5:
+    print('\n       Tienda "Ahorra-Express"\n'  )
     print("\n         Menu Principal\n")
     print("="*35)
     print("1.- Realizar una compra")
