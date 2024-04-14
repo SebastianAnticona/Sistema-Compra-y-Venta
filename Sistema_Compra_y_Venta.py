@@ -19,6 +19,22 @@ prod_pre_ven={"Aceite":5.50,"Leche":3.20,"Azúcar":9.50,"Arroz":2.50,"Atún":4.5
               "Colores":7.00,"Lápiz":5.00,"Temperas":6.00,
               "Detergente":2.00,"Lejía":6.00,"Lava-vajilla":6.00,"Desinfectante":7.30}
 
+cd_vt=f"""\n
+╓-----------------------------------------------------------------------------------╖
+║                          Cuadro de Productos(Venta)                               ║
+╟-----------------------------------------------------------------------------------╢
+          Abarrotes        ┃    Útiles Escolares     ┃           Limpieza            
+╟-----------------------------------------------------------------------------------╢
+    Producto  ┃    Precio   ┃  Producto  ┃   Precio   ┃   Producto    ┃    Precio       
+╟-----------------------------------------------------------------------------------╢ 
+    Aceite    ┃  S/. {prod_pre_ven['Aceite']:>5.2f}  ┃  Colores   ┃  S/. {prod_pre_ven['Colores']:>5.2f} ┃ Detergente    ┃  S/. {prod_pre_ven['Detergente']:>5.2f}  
+    Leche     ┃  S/. {prod_pre_ven['Leche']:>5.2f}  ┃  Lápiz     ┃  S/. {prod_pre_ven['Lápiz']:>5.2f} ┃ Lejía         ┃  S/. {prod_pre_ven['Lejía']:>5.2f}  
+    Azúcar    ┃  S/. {prod_pre_ven['Azúcar']:>5.2f}  ┃  Temperas  ┃  S/. {prod_pre_ven['Temperas']:>5.2f} ┃ Lava-vajilla  ┃  S/. {prod_pre_ven['Lava-vajilla']:>5.2f}  
+    Arroz     ┃  S/. {prod_pre_ven['Arroz']:>5.2f}  ┃            ┃            ┃ Desinfectante ┃  S/. {prod_pre_ven['Desinfectante']:>5.2f}  
+    Atún      ┃  S/. {prod_pre_ven['Atún']:>5.2f}  ┃            ┃            ┃               ┃             
+╙-----------------------------------------------------------------------------------╜\n
+"""
+
 
 dni_nom={}
 l_vt=[]
@@ -187,21 +203,6 @@ while mn_p!=5:
         op="SI"
         pro=[]
         t=0
-        cd_vt=f"""\n
-╓-----------------------------------------------------------------------------------╖
-║                          Cuadro de Productos(Venta)                               ║
-╟-----------------------------------------------------------------------------------╢
-          Abarrotes        ┃    Útiles Escolares     ┃           Limpieza            
-╟-----------------------------------------------------------------------------------╢
-    Producto  ┃    Precio   ┃  Producto  ┃   Precio   ┃   Producto    ┃    Precio       
-╟-----------------------------------------------------------------------------------╢ 
-    Aceite    ┃  S/. {prod_pre_ven['Aceite']:>5.2f}  ┃  Colores   ┃  S/. {prod_pre_ven['Colores']:>5.2f} ┃ Detergente    ┃  S/. {prod_pre_ven['Detergente']:>5.2f}  
-    Leche     ┃  S/. {prod_pre_ven['Leche']:>5.2f}  ┃  Lápiz     ┃  S/. {prod_pre_ven['Lápiz']:>5.2f} ┃ Lejía         ┃  S/. {prod_pre_ven['Lejía']:>5.2f}  
-    Azúcar    ┃  S/. {prod_pre_ven['Azúcar']:>5.2f}  ┃  Temperas  ┃  S/. {prod_pre_ven['Temperas']:>5.2f} ┃ Lava-vajilla  ┃  S/. {prod_pre_ven['Lava-vajilla']:>5.2f}  
-    Arroz     ┃  S/. {prod_pre_ven['Arroz']:>5.2f}  ┃            ┃            ┃ Desinfectante ┃  S/. {prod_pre_ven['Desinfectante']:>5.2f}  
-    Atún      ┃  S/. {prod_pre_ven['Atún']:>5.2f}  ┃            ┃            ┃               ┃             
-╙-----------------------------------------------------------------------------------╜\n
-"""
         print(cd_vt)
         while op!="NO":
             while True:
